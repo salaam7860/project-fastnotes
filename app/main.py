@@ -56,33 +56,7 @@ async def note_delete(note_id: int):
     return response
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#--------------------------------------------------------------------------------------------------------------------------------
 
 # BACKEND CONFIGS
 @app.get("/scalar", include_in_schema=False)
