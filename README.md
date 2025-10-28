@@ -1,2 +1,2 @@
-# Project -- **Fast Notes**
----
+# Project - Fast Notes
+
