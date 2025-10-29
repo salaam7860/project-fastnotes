@@ -21,7 +21,7 @@ async def note_create(new_note: NoteCreate) -> NoteOut:
 async def note_get():
     note = await note_services.get_all_notes()
     return note
-
+ 
 # GET SINGLE NOTE 
 @app.get("/note/{note_id}", response_model=NoteOut)
 async def single_note_get(note_id: int) -> NoteOut:

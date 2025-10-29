@@ -28,4 +28,4 @@ class NotePatch(BaseModel):
 # NOTE RESPONSE SERIALIZATION 
 class NoteOut(NoteBase):
     id : int
-    model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True) 

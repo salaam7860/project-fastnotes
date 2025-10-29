@@ -11,3 +11,4 @@ dependencies = [
     "scalar-fastapi>=1.4.3",
     "sqlalchemy[asyncio]>=2.0.44",
 ]
+ 

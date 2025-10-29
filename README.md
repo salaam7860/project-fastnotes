@@ -224,7 +224,7 @@ All endpoints are asynchronous and return validated `NoteOut` responses.
   "content": "Added action items."
 }
 ```
-
+ 
 **Response:**
 
 ```json

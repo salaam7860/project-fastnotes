@@ -38,7 +38,7 @@ async def get_all_notes() -> List[NoteOut]:
         note_not_found(note)
         return note.all()
 
-
+ 
 # GET SINGLE NOTE
 async def get_single_note(id: int) -> NoteOut:
     async with async_session() as session:

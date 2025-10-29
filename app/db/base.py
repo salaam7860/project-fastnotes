@@ -7,4 +7,4 @@ from sqlalchemy.ext.asyncio import AsyncAttrs
 class Base(DeclarativeBase, AsyncAttrs):
     pass
 
-from app.notes import models as notes_models
+from app.notes import models as notes_models 
