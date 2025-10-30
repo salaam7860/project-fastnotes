@@ -8,9 +8,9 @@ A refined, modular **FastAPI + SQLite** backend for creating, reading, updating,
 
 ## ✨ What’s New in v3
 
-* ✅ **Dependency Injection (DI)** throughout the stack — services, repositories, settings, etc are injected for better modularity and testability. ([codingeasypeasy.com][1])
-* ✅ **Cleaner code architecture** — clearer separation between layers (API/router layer, service layer, repository/data-access layer), making the codebase easier to read, maintain and test. ([DeepWiki][2])
-* ✅ Improved **testability** — thanks to DI we can easily override dependencies (e.g., mock repos, test settings) in unit/integration tests. ([Leapcell][3])
+* ✅ **Dependency Injection (DI)** throughout the stack — services, repositories, settings, etc are injected for better modularity and testability. 
+* ✅ **Cleaner code architecture** — clearer separation between layers (API/router layer, service layer, repository/data-access layer), making the codebase easier to read, maintain and test.  
+* ✅ Improved **testability** — thanks to DI we can easily override dependencies (e.g., mock repos, test settings) in unit/integration tests.  
 * ✅ Still retains previous improvements: async endpoints, Pydantic models, service layer, partial updates (PATCH), etc.
 
 ---
@@ -231,8 +231,9 @@ All endpoints are asynchronous, make use of injected dependencies, and return va
 
 In version 3.0, we’ve elevated our architecture by leveraging DI across layers: settings, database sessions, repositories, services and routers. This allows:
 
-* Cleaner separation of concerns: your endpoint handlers don’t manually instantiate their dependencies, instead they receive them as parameters via `Depends`. ([codingeasypeasy.com][1])
-* Easier mocking and testing: you can override injected dependencies (e.g., swap out real repository with mock) without modifying endpoint code. ([Leapcell][3])
+* Cleaner separation of concerns: your endpoint handlers don’t manually instantiate their dependencies, instead they receive them as parameters via `Depends`.  
+* Easier mocking and testing: you can override injected dependencies (e.g., swap out real repository with mock) without modifying endpoint code.  
+
 * More flexible code: you can more easily swap implementation of a repository or service (for example, moving from SQLite to Postgres) without heavy endpoint rewrites.
 
 
@@ -253,7 +254,7 @@ pip install \
 
 ```
 
-(Or use `poetry`/`pip-env` as your preference.)
+(Or use `poetry`/`pip-env`/`uv` as your preference.)
 
 ### 2. **Run Alembic migrations**
 
@@ -264,7 +265,7 @@ alembic upgrade head
 ### 3. **Start the FastAPI server**
 
 ```bash
-uvicorn app.main:app --reload
+fastapi dev main.py
 ```
 
 ### 4. **Access Documentation**
