@@ -235,24 +235,7 @@ In version 3.0, we’ve elevated our architecture by leveraging DI across layers
 * Easier mocking and testing: you can override injected dependencies (e.g., swap out real repository with mock) without modifying endpoint code. ([Leapcell][3])
 * More flexible code: you can more easily swap implementation of a repository or service (for example, moving from SQLite to Postgres) without heavy endpoint rewrites.
 
-### Example (simplified)
 
-```python
-from fastapi import APIRouter, Depends
-from .service import NoteService
-from .schemas import NoteCreate, NoteOut
-
-router = APIRouter()
-
-@router.post("/note", response_model=NoteOut, status_code=201)
-async def create_note(
-    note_in: NoteCreate,
-    note_service: NoteService = Depends()
-):
-    return await note_service.create(note_in)
-```
-
-Here `NoteService` is injected automatically. Under the hood the DI setup will provide the correct service (which itself may depend on repository, which depends on DB session, etc).
 
 ---
 
