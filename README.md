@@ -244,7 +244,13 @@ In version 3.0, we’ve elevated our architecture by leveraging DI across layers
 ### 1. **Install dependencies**
 
 ```bash
-pip install fastapi uvicorn sqlalchemy alembic pydantic
+pip install \
+  "aiosqlite>=0.21.0" \
+  "alembic>=1.17.1" \
+  "fastapi[standard]>=0.120.2" \
+  "scalar-fastapi>=1.4.3" \
+  "sqlalchemy[asyncio]>=2.0.44"
+
 ```
 
 (Or use `poetry`/`pip-env` as your preference.)
